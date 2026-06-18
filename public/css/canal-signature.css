@@ -1,0 +1,215 @@
+/* Canal Informatique — signature design system */
+
+:root {
+    --canal-red: #dc2626;
+    --canal-dark: #0c0f14;
+    --canal-charcoal: #1a1f2e;
+}
+
+/* Flowing canal lines animation */
+@keyframes canal-flow {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@keyframes canal-pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+}
+
+@keyframes fade-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.canal-flow-track {
+    animation: canal-flow 25s linear infinite;
+}
+
+.canal-fade-up {
+    animation: fade-up 0.7s ease-out forwards;
+}
+
+/* Signature red top stripe */
+.canal-stripe::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--canal-red) 0%, #ef4444 40%, transparent 100%);
+}
+
+/* Card signature — diagonal red corner */
+.canal-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.canal-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--canal-red), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.canal-card:hover::before {
+    opacity: 1;
+}
+
+/* Nav active underline */
+.canal-nav-link {
+    position: relative;
+}
+
+.canal-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--canal-red);
+    transition: width 0.3s ease;
+}
+
+.canal-nav-link:hover::after,
+.canal-nav-link.active::after {
+    width: 100%;
+}
+
+/* 1992 stamp badge */
+.canal-stamp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid rgba(220, 38, 38, 0.3);
+    background: rgba(220, 38, 38, 0.08);
+    padding: 0.35rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.canal-stamp .year {
+    color: #ef4444;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+}
+
+/* Hero mesh glow */
+.canal-hero-glow {
+    background:
+        radial-gradient(ellipse 80% 60% at 70% 40%, rgba(220, 38, 38, 0.18) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 40% at 20% 80%, rgba(220, 38, 38, 0.08) 0%, transparent 50%);
+}
+
+/* Stat counter card */
+.canal-stat {
+    position: relative;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.canal-stat:hover {
+    border-color: rgba(220, 38, 38, 0.3);
+    box-shadow: 0 8px 30px rgba(220, 38, 38, 0.08);
+    transform: translateY(-2px);
+}
+
+.canal-stat .number {
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1;
+    background: linear-gradient(135deg, #0f172a 30%, var(--canal-red));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.canal-stat.accent .number {
+    background: linear-gradient(135deg, var(--canal-red), #f87171);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Section title signature */
+.canal-section-title {
+    position: relative;
+    display: inline-block;
+}
+
+.canal-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 48px;
+    height: 3px;
+    background: var(--canal-red);
+    border-radius: 2px;
+}
+
+/* CTA band wave top */
+.canal-cta-wave {
+    position: relative;
+}
+
+.canal-cta-wave svg {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    transform: translateY(-99%);
+}
+
+/* Button signature */
+.btn-canal {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn-canal::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+}
+
+.btn-canal:hover::after {
+    transform: translateX(100%);
+}
+
+/* Form input signature focus */
+.canal-input:focus {
+    border-color: var(--canal-red);
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12);
+}
+
+/* Testimonial quote mark */
+.canal-quote::before {
+    content: '\201C';
+    position: absolute;
+    top: -0.5rem;
+    left: 1rem;
+    font-size: 4rem;
+    line-height: 1;
+    color: rgba(220, 38, 38, 0.15);
+    font-family: Georgia, serif;
+}
