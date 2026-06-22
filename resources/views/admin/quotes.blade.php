@@ -104,7 +104,7 @@
                             @else
                                 <form action="{{ route('admin.quotes.status', [$quote->id, 'Pending']) }}" method="POST" class="inline">
                                     @csrf
-                                    @method('PATCH')
+                                    @method('POST')
                                     <button type="submit" class="text-xs font-bold text-slate-500 hover:text-slate-600 bg-slate-100 hover:bg-slate-200 px-3 py-1.5 rounded-xl transition">
                                         Réouvrir
                                     </button>
