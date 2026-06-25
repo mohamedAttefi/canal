@@ -1,7 +1,6 @@
 {
   "version": 2,
   "framework": null,
-  "outputDirectory": "public",
   "builds": [
     {
       "src": "api/index.php",
@@ -17,17 +16,5 @@
       "src": "/(.*)",
       "dest": "/api/index.php"
     }
-  ],
-  "installCommand": "composer install --no-dev --optimize-autoloader && npm install && npm run build",
-  "env": {
-    "APP_ENV": "production",
-    "APP_DEBUG": "false",
-    "APP_KEY": {
-      "description": "Generate with: php artisan key:generate",
-      "generator": "secret"
-    },
-    "APP_URL": {
-      "description": "Your Vercel deployment URL"
-    }
-  }
+  ]
 }
