@@ -71,6 +71,7 @@
 
     <!-- Structured Data for Local Business -->
     <script type="application/ld+json">
+@verbatim
         {
             "@context": "https://schema.org",
             "@type": "ComputerRepairService",
@@ -95,6 +96,7 @@
             },
             "priceRange": "$$"
         }
+@endverbatim
     </script>
 </head>
 
