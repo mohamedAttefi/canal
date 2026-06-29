@@ -1,5 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Contact')
+@section('meta-description', 'Contactez Canal Informatique à Casablanca pour vos besoins en maintenance informatique, installation réseaux et support technique. Réponse sous 24h.')
+@section('meta-keywords', 'contact Canal Informatique, téléphone Casablanca, adresse Canal Informatique, support informatique, demande devis IT')
 @section('content')
 
 @include('partials.page-hero', [

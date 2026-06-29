@@ -1,5 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Nos Services')
+@section('meta-description', 'Découvrez les services de Canal Informatique : maintenance informatique, vente de matériel, installation réseaux et support technique à Casablanca.')
+@section('meta-keywords', 'services informatiques Casablanca, maintenance PC, vente matériel informatique, installation réseau, support IT, Canal Informatique services')
 @section('content')
 
 @include('partials.page-hero', [

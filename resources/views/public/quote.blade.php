@@ -1,5 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Demande de Devis')
+@section('meta-description', 'Demandez un devis gratuit pour vos besoins informatiques à Canal Informatique Casablanca. Maintenance, installation réseaux et support technique. Réponse sous 24h.')
+@section('meta-keywords', 'devis informatique Casablanca, demande devis IT, estimation maintenance, devis gratuit Canal Informatique, devis installation réseau')
 @section('content')
 
 @include('partials.page-hero', [

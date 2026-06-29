@@ -1,5 +1,7 @@
 @extends('layouts.app')
 @section('title', 'À Propos de Nous')
+@section('meta-description', 'Canal Informatique, votre partenaire IT de confiance à Casablanca depuis 1992. Découvrez notre histoire, notre mission et nos valeurs en maintenance informatique.')
+@section('meta-keywords', 'Canal Informatique histoire, maintenance informatique Casablanca, partenaire IT Maroc, infrastructure réseau, support technique')
 @section('content')
 
 @include('partials.page-hero', [

@@ -4,10 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
     <title>@yield('title', 'Canal Informatique') - Votre partenaire informatique depuis 1992</title>
-    <meta name="description" content="Canal Informatique, maintenance informatique, vente de matériel, installations réseaux et support technique de confiance à Casablanca.">
+    <meta name="description" content="@yield('meta-description', 'Canal Informatique, maintenance informatique, vente de matériel, installations réseaux et support technique de confiance à Casablanca. Plus de 34 ans d\'expérience en IT.')">
+    <meta name="keywords" content="@yield('meta-keywords', 'maintenance informatique Casablanca, vente matériel informatique, installation réseaux, support technique, IT Maroc, infrastructure informatique, Canal Informatique')">
+    <meta name="author" content="Canal Informatique">
+    <meta name="language" content="fr">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ config('app.url') }}">
     <meta property="og:title" content="Canal Informatique - Casablanca">
-    <meta property="og:description" content="Votre partenaire de confiance en maintenance et déploiement d'infrastructures informatiques à Casablanca.">
+    <meta property="og:description" content="Votre partenaire de confiance en maintenance et déploiement d'infrastructures informatiques à Casablanca depuis 1992.">
+    <meta property="og:image" content="{{ asset('images/og-image.jpg') }}">
+    <meta property="og:locale" content="fr_FR">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{{ config('app.url') }}">
+    <meta name="twitter:title" content="Canal Informatique - Casablanca">
+    <meta name="twitter:description" content="Votre partenaire de confiance en maintenance et déploiement d'infrastructures informatiques à Casablanca depuis 1992.">
+    <meta name="twitter:image" content="{{ asset('images/og-image.jpg') }}">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ request()->url() }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
@@ -43,6 +67,34 @@
         }
     </script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- Structured Data for Local Business -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ComputerRepairService",
+        "name": "Canal Informatique",
+        "image": "{{ asset('images/og-image.jpg') }}",
+        "description": "Maintenance informatique, vente de matériel, installations réseaux et support technique de confiance à Casablanca depuis 1992.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Boulevard Mohamed V",
+            "addressLocality": "Casablanca",
+            "addressCountry": "MA"
+        },
+        "telephone": "+212620155466",
+        "openingHours": [
+            "Mo-Fr 08:30-18:30",
+            "Sa 09:00-13:00"
+        ],
+        "foundingDate": "1992",
+        "areaServed": {
+            "@type": "City",
+            "name": "Casablanca"
+        },
+        "priceRange": "$$"
+    }
+    </script>
 </head>
 
 <body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen font-sans antialiased">
