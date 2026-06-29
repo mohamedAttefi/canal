@@ -2,6 +2,7 @@
 <html lang="fr">
 
 <head>
+    <link rel="icon" sizes="32x32" href="{{ asset('image.png') }}" type="image">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
@@ -10,7 +11,7 @@
     <meta name="keywords" content="@yield('meta-keywords', 'maintenance informatique Casablanca, vente matériel informatique, installation réseaux, support technique, IT Maroc, infrastructure informatique, Canal Informatique')">
     <meta name="author" content="Canal Informatique">
     <meta name="language" content="fr">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ config('app.url') }}">
@@ -18,20 +19,20 @@
     <meta property="og:description" content="Votre partenaire de confiance en maintenance et déploiement d'infrastructures informatiques à Casablanca depuis 1992.">
     <meta property="og:image" content="{{ asset('images/og-image.jpg') }}">
     <meta property="og:locale" content="fr_FR">
-    
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="{{ config('app.url') }}">
     <meta name="twitter:title" content="Canal Informatique - Casablanca">
     <meta name="twitter:description" content="Votre partenaire de confiance en maintenance et déploiement d'infrastructures informatiques à Casablanca depuis 1992.">
     <meta name="twitter:image" content="{{ asset('images/og-image.jpg') }}">
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href="{{ request()->url() }}">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
@@ -47,7 +48,7 @@
                     },
                     colors: {
                         brand: {
-                            50:  '#fef2f2',
+                            50: '#fef2f2',
                             100: '#fee2e2',
                             400: '#f87171',
                             500: '#ef4444',
@@ -67,33 +68,33 @@
         }
     </script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    
+
     <!-- Structured Data for Local Business -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ComputerRepairService",
-        "name": "Canal Informatique",
-        "image": "{{ asset('images/og-image.jpg') }}",
-        "description": "Maintenance informatique, vente de matériel, installations réseaux et support technique de confiance à Casablanca depuis 1992.",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Boulevard Mohamed V",
-            "addressLocality": "Casablanca",
-            "addressCountry": "MA"
-        },
-        "telephone": "+212620155466",
-        "openingHours": [
-            "Mo-Fr 08:30-18:30",
-            "Sa 09:00-13:00"
-        ],
-        "foundingDate": "1992",
-        "areaServed": {
-            "@type": "City",
-            "name": "Casablanca"
-        },
-        "priceRange": "$$"
-    }
+        {
+            "@context": "https://schema.org",
+            "@type": "ComputerRepairService",
+            "name": "Canal Informatique",
+            "image": "{{ asset('images/og-image.jpg') }}",
+            "description": "Maintenance informatique, vente de matériel, installations réseaux et support technique de confiance à Casablanca depuis 1992.",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Boulevard Mohamed V",
+                "addressLocality": "Casablanca",
+                "addressCountry": "MA"
+            },
+            "telephone": "+212620155466",
+            "openingHours": [
+                "Mo-Fr 08:30-18:30",
+                "Sa 09:00-13:00"
+            ],
+            "foundingDate": "1992",
+            "areaServed": {
+                "@type": "City",
+                "name": "Casablanca"
+            },
+            "priceRange": "$$"
+        }
     </script>
 </head>
 
@@ -156,7 +157,9 @@
                     <p class="text-sm leading-relaxed mb-6 text-slate-500">Partenaire technologique de confiance à Casablanca depuis 1992 — installation, maintenance et vente de matériel informatique professionnel.</p>
                     <a href="tel:+212620155466" class="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-brand-400 transition">
                         <span class="w-8 h-8 rounded-lg bg-brand-600/20 flex items-center justify-center text-brand-400">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
                         </span>
                         +212 620 155 466
                     </a>
@@ -186,14 +189,20 @@
             <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-600">
                 <p>&copy; {{ date('Y') }} Canal Informatique. Tous droits réservés.</p>
                 <p class="flex items-center gap-2">
-                    <svg class="w-4 h-4 text-brand-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.18l8 4v8.64l-8 4-8-4V8.18l8-4z"/></svg>
+                    <svg class="w-4 h-4 text-brand-600" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.18l8 4v8.64l-8 4-8-4V8.18l8-4z" />
+                    </svg>
                     Infrastructure · Réseaux · Support
                 </p>
             </div>
         </div>
     </footer>
 
-    <style>[x-cloak] { display: none !important; }</style>
+    <style>
+        [x-cloak] {
+            display: none !important;
+        }
+    </style>
 </body>
 
 </html>
