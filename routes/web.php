@@ -2,10 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
-use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\Admin\ServiceController;
-use App\Http\Controllers\Admin\OperationController;
+use App\Http\Controllers\auth\LoginController;
+use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\admin\ServiceController;
+use App\Http\Controllers\admin\OperationController;
 
 // Sitemap
 Route::get('/sitemap.xml', [PublicController::class, 'sitemap'])->name('sitemap');
